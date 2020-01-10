@@ -126,11 +126,6 @@ class Courses extends Component {
                                                             Algorithms, Part I
                                                         </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="https://www.coursera.org/learn/algorithms-part2" target="_blank" rel="noopener noreferrer" className="text-dark">
-                                                            Algorithms, Part II
-                                                        </a>
-                                                    </li>
                                                 </ul>
                                             </div>
                                             <div className="col align-self-center">
