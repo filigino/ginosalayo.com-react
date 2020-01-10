@@ -1,7 +1,7 @@
 import React from 'react'
 import { Jumbotron, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem }
     from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -10,8 +10,10 @@ const Header = () => {
             <Navbar dark expand="xs">
                 <div className="container">
                     <NavbarToggler />
-                    <NavbarBrand href="/">
-                        <span className="fa fa-home fa-2x"></span>
+                    <NavbarBrand>
+                        <NavLink to="/home">
+                            <span className="fa fa-home fa-2x icon-white"></span>
+                        </NavLink>
                     </NavbarBrand>
                     <Nav navbar>
                         <NavItem>
@@ -31,7 +33,7 @@ const Header = () => {
                 <div className="container text-dark">
                     <div className="row row-content text-center">
                         <div className="col-12">
-                            <img src="assets/img/headshot.png" className="img-fluid headshot" alt="Gino Salayo"/>
+                            <img src="img/headshot.png" className="img-fluid headshot" alt="Gino Salayo"/>
                         </div>
                         <div class="col-12">
                             <h1>Gino Salayo</h1>
@@ -60,7 +62,7 @@ const Header = () => {
                     </div>
                     <div className="col-12 col-sm">
                         <h2>
-                            <a href="assets/Resume - Gino Salayo.pdf" target="_blank" rel="noopener noreferrer" className="text-dark">
+                            <a href="Resume - Gino Salayo.pdf" target="_blank" rel="noopener noreferrer" className="text-dark">
                                 Resume
                             </a>
                         </h2>
