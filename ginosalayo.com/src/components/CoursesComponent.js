@@ -19,6 +19,7 @@ class Courses extends Component {
             isSfwrOpen: false,
             isStatsOpen: false
         }
+
         this.toggleComSci = this.toggleComSci.bind(this)
         this.toggleEcon = this.toggleEcon.bind(this)
         this.toggleElec = this.toggleElec.bind(this)
@@ -121,11 +122,15 @@ class Courses extends Component {
                                         <div className="row">
                                             <div className="col">
                                                 <ul>
-                                                    <li>
-                                                        <a href="https://www.coursera.org/learn/algorithms-part1" target="_blank" rel="noopener noreferrer" className="text-dark">
-                                                            Algorithms, Part I
-                                                        </a>
-                                                    </li>
+                                                {this.props.courses.filter((course) => course.subSchool === "Princeton University").map((course) => {
+                                                        return (
+                                                            <li>
+                                                                <a href={course.url} target="_blank" rel="noopener noreferrer" className="text-dark">
+                                                                    {course.name}
+                                                                </a>
+                                                            </li>
+                                                        )
+                                                    })}
                                                 </ul>
                                             </div>
                                             <div className="col align-self-center">
@@ -135,26 +140,15 @@ class Courses extends Component {
                                         <div className="row">
                                             <div className="col">
                                                 <ul>
-                                                    <li>
-                                                        <a href="https://www.coursera.org/learn/front-end-react" target="_blank" rel="noopener noreferrer" className="text-dark">
-                                                            Front-End Web Development with React
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://www.coursera.org/learn/bootstrap-4" target="_blank" rel="noopener noreferrer" className="text-dark">
-                                                            Front-End Web UI Frameworks and Tools: Bootstrap 4
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://www.coursera.org/learn/react-native" target="_blank" rel="noopener noreferrer" className="text-dark">
-                                                            Multiplatform Mobile App Development with React Native
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://www.coursera.org/learn/server-side-nodejs" target="_blank" rel="noopener noreferrer" className="text-dark">
-                                                            Server-side Development with NodeJS, Express and MongoDB
-                                                        </a>
-                                                    </li>
+                                                    {this.props.courses.filter((course) => course.subSchool === "The Hong Kong University of Science and Technology").map((course) => {
+                                                        return (
+                                                            <li>
+                                                                <a href={course.url} target="_blank" rel="noopener noreferrer" className="text-dark">
+                                                                    {course.name}
+                                                                </a>
+                                                            </li>
+                                                        )
+                                                    })}
                                                 </ul>
                                             </div>
                                             <div className="col align-self-center">
@@ -186,9 +180,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#econHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Engineering Economics</li>
-                                            <li>Introductory Macroeconomics</li>
-                                            <li>Introductory Microeconomics</li>
+                                            {this.props.courses.filter((course) => course.subject === "Economics").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>
@@ -204,10 +200,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#elecEngHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Analog and Digital Circuits</li>
-                                            <li>Biomedical Instrumentation</li>
-                                            <li>Electrical Circuits and Power</li>
-                                            <li>Electronics and Instrumentation</li>
+                                            {this.props.courses.filter((course) => course.subject === "Electrical Engineering").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>
@@ -223,11 +220,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#engHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Engineering Computation</li>
-                                            <li>Engineering Design and Graphics</li>
-                                            <li>Engineering Profession and Practice</li>
-                                            <li>Inquiry in an Engineering Context I</li>
-                                            <li>Sustainability and Ethics in Engineering</li>
+                                        {this.props.courses.filter((course) => course.subject === "General Engineering").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>
@@ -243,11 +240,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#scienceHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Electricity and Magnetism</li>
-                                            <li>General Chemistry for Engineering I</li>
-                                            <li>Introductory Mechanics</li>
-                                            <li>Structure and Properties of Materials</li>
-                                            <li>Waves, Electricity and Magnetic Fields</li>
+                                        {this.props.courses.filter((course) => course.subject === "General Sciences").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>
@@ -263,11 +260,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#mathHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Engineering Mathematics I</li>
-                                            <li>Engineering Mathematics II-A</li>
-                                            <li>Engineering Mathematics II-B</li>
-                                            <li>Engineering Mathematics III</li>
-                                            <li>Engineering Mathematics IV</li>
+                                        {this.props.courses.filter((course) => course.subject === "Mathematics").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>
@@ -283,11 +280,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#mechEngHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Engineering Mechanics 'A'</li>
-                                            <li>Engineering Mechanics: Kinetics and Dynamics</li>
-                                            <li>Mechanical Engineering Measurements</li>
-                                            <li>Mechanical Vibrations</li>
-                                            <li>Thermodynamics</li>
+                                        {this.props.courses.filter((course) => course.subject === "Mechanical Engineering").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>
@@ -303,12 +300,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#tronHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Dynamic Models and Control of Physical Systems</li>
-                                            <li>Embedded Systems Design I</li>
-                                            <li>Embedded Systems Design II</li>
-                                            <li>Mechatronics</li>
-                                            <li>Real-Time Systems and Control Applications</li>
-                                            <li>Robotics</li>
+                                        {this.props.courses.filter((course) => course.subject === "Mechatronics Engineering").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>
@@ -324,15 +320,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#sfwrHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Communication Skills</li>
-                                            <li>Computer Networks and Security</li>
-                                            <li>Linear Optimization</li>
-                                            <li>Operating Systems</li>
-                                            <li>Principles of Programming</li>
-                                            <li>Scientific Computation</li>
-                                            <li>Signals and Systems</li>
-                                            <li>Software Development</li>
-                                            <li>Software Engineering Practice and Experience: Software Development Skills</li>
+                                        {this.props.courses.filter((course) => course.subject === "Software Engineering").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>
@@ -348,7 +340,11 @@ class Courses extends Component {
                                 <UncontrolledCollapse role="tabpanel" toggler="#statsHeader">
                                     <CardBody>
                                         <ul>
-                                            <li>Probability and Statistics for Engineering</li>
+                                        {this.props.courses.filter((course) => course.subject === "Statistics").map((course) => {
+                                                return (
+                                                    <li>{course.name}</li>
+                                                )
+                                            })}
                                         </ul>
                                     </CardBody>
                                 </UncontrolledCollapse>

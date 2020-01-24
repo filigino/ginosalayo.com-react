@@ -1,35 +1,252 @@
 export const COURSES = [
     {
-      id: 0,
-      name: 'Computer Science',
-      featured: false,
-      description: "Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections."
+        name: "Algorithms, Part I",
+        school: "Coursera",
+        subject: "Computer Science",
+        subSchool: "Princeton University",
+        url: "https://www.coursera.org/learn/algorithms-part1"
     },
     {
-      id: 1,
-      name: 'Dhanasekaran Witherspoon',
-      image: '/assets/images/alberto.png',
-      designation: 'Chief Food Officer',
-      abbr: 'CFO',
-        featured: false,
-      description: 'Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!'
+        name: "Front-End Web Development with React",
+        school: "Coursera",
+        subject: "Computer Science",
+        subSchool: "The Hong Kong University of Science and Technology",
+        url: "https://www.coursera.org/learn/front-end-react"
     },
     {
-      id: 2,
-      name: 'Agumbe Tang',
-      image: '/assets/images/alberto.png',
-      designation: 'Chief Taste Officer',
-      abbr: 'CTO',
-        featured: false,
-      description: 'Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, You click only if you survive my lick.'
+        name: "Front-End Web UI Frameworks and Tools: Bootstrap 4",
+        school: "Coursera",
+        subject: "Computer Science",
+        subSchool: "The Hong Kong University of Science and Technology",
+        url: "https://www.coursera.org/learn/bootstrap-4"
     },
     {
-      id: 3,
-      name: 'Alberto Somayya',
-      image: '/assets/images/alberto.png',
-      designation: 'Executive Chef',
-      abbr: 'EC',
-      featured: true,
-      description: 'Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!'
+        name: "Multiplatform Mobile App Development with React Native",
+        school: "Coursera",
+        subject: "Computer Science",
+        subSchool: "The Hong Kong University of Science and Technology",
+        url: "https://www.coursera.org/learn/react-native"
+    },
+    {
+        name: "Server-side Development with NodeJS, Express, and MongoDB",
+        school: "Coursera",
+        subject: "Computer Science",
+        subSchool: "The Hong Kong University of Science and Technology",
+        url: "https://www.coursera.org/learn/server-side-nodejs"
+    },
+    {
+        name: "Engineering Economics",
+        school: "McMaster University",
+        subject: "Economics"
+    },
+    {
+        name: "Introductory Macroeconomics",
+        school: "McMaster University",
+        subject: "Economics"
+    },
+    {
+        name: "Introductory Microeconomics",
+        school: "McMaster University",
+        subject: "Economics"
+    },
+    {
+        name: "Analog and Digital Circuits",
+        school: "McMaster University",
+        subject: "Electrical Engineering"
+    },
+    {
+        name: "Biomedical Instrumentation",
+        school: "McMaster University",
+        subject: "Electrical Engineering"
+    },
+    {
+        name: "Electrical Circuits and Power",
+        school: "McMaster University",
+        subject: "Electrical Engineering"
+    },
+    {
+        name: "Electronics and Instrumentation",
+        school: "McMaster University",
+        subject: "Electrical Engineering"
+    },
+    {
+        name: "Engineering Computation",
+        school: "McMaster University",
+        subject: "General Engineering"
+    },
+    {
+        name: "Engineering Design and Graphics",
+        school: "McMaster University",
+        subject: "General Engineering"
+    },
+    {
+        name: "Engineering Profession and Practice",
+        school: "McMaster University",
+        subject: "General Engineering"
+    },
+    {
+        name: "Inquiry in an Engineering Context I",
+        school: "McMaster University",
+        subject: "General Engineering"
+    },
+    {
+        name: "Sustainability and Ethics in Engineering",
+        school: "McMaster University",
+        subject: "General Engineering"
+    },
+    {
+        name: "Electricity and Magnetism",
+        school: "McMaster University",
+        subject: "General Sciences"
+    },
+    {
+        name: "General Chemistry for Engineering I",
+        school: "McMaster University",
+        subject: "General Sciences"
+    },
+    {
+        name: "Introductory Mechanics",
+        school: "McMaster University",
+        subject: "General Sciences"
+    },
+    {
+        name: "Structure and Properties of Materials",
+        school: "McMaster University",
+        subject: "General Sciences"
+    },
+    {
+        name: "Waves, Electricity and Magnetic Fields",
+        school: "McMaster University",
+        subject: "General Sciences"
+    },
+    {
+        name: "Engineering Mathematics I",
+        school: "McMaster University",
+        subject: "Mathematics"
+    },
+    {
+        name: "Engineering Mathematics II-A",
+        school: "McMaster University",
+        subject: "Mathematics"
+    },
+    {
+        name: "Engineering Mathematics II-B",
+        school: "McMaster University",
+        subject: "Mathematics"
+    },
+    {
+        name: "Engineering Mathematics III",
+        school: "McMaster University",
+        subject: "Mathematics"
+    },
+    {
+        name: "Engineering Mathematics IV",
+        school: "McMaster University",
+        subject: "Mathematics"
+    },
+    {
+        name: "Engineering Mechanics 'A'",
+        school: "McMaster University",
+        subject: "Mechanical Engineering"
+    },
+    {
+        name: "Engineering Mechanics: Kinetics and Dynamics",
+        school: "McMaster University",
+        subject: "Mechanical Engineering"
+    },
+    {
+        name: "Mechanical Engineering Measurements",
+        school: "McMaster University",
+        subject: "Mechanical Engineering"
+    },
+    {
+        name: "Mechanical Vibrations",
+        school: "McMaster University",
+        subject: "Mechanical Engineering"
+    },
+    {
+        name: "Thermodynamics",
+        school: "McMaster University",
+        subject: "Mechanical Engineering"
+    },
+    {
+        name: "Dynamic Models and Control of Physical Systems",
+        school: "McMaster University",
+        subject: "Mechatronics Engineering"
+    },
+    {
+        name: "Embedded Systems Design I",
+        school: "McMaster University",
+        subject: "Mechatronics Engineering"
+    },
+    {
+        name: "Embedded Systems Design II",
+        school: "McMaster University",
+        subject: "Mechatronics Engineering"
+    },
+    {
+        name: "Mechatronics",
+        school: "McMaster University",
+        subject: "Mechatronics Engineering"
+    },
+    {
+        name: "Real-Time Systems and Control Applications",
+        school: "McMaster University",
+        subject: "Mechatronics Engineering"
+    },
+    {
+        name: "Robotics",
+        school: "McMaster University",
+        subject: "Mechatronics Engineering"
+    },
+    {
+        name: "Communication Skills",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Computer Networks and Security",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Linear Optimization",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Operating Systems",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Principles of Programming",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Scientific Computation",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Signals and Systems",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Software Development",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Software Engineering Practice and Experience: Software Development Skills",
+        school: "McMaster University",
+        subject: "Software Engineering"
+    },
+    {
+        name: "Probability and Statistics for Engineering",
+        school: "McMaster University",
+        subject: "Statistics"
     }
-  ];
+]
