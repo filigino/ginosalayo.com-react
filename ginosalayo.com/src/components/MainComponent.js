@@ -1,5 +1,4 @@
-// Container component (via class component)
-import React, { Component } from 'react'
+import React from 'react'
 import Header from './HeaderComponent'
 import Home from './HomeComponent'
 import About from './AboutComponent'
@@ -13,25 +12,19 @@ const mapStateToProps = state => {
   }
 }
 
-class Main extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <div>
-        <Header />
-          <Switch>
-            <Route path="/home" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/courses" component={() =>
-              <Courses courses={this.props.courses} />} />
-            <Redirect to="/" />
-          </Switch>
-      </div>
-    )
-  }
+const Main = (props) => {
+  return (
+    <div>
+      <Header />
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/courses" component={() =>
+            <Courses courses={props.courses} />} />
+          <Redirect to="/" />
+        </Switch>
+    </div>
+  )
 }
 
 export default withRouter(connect(mapStateToProps)(Main))
