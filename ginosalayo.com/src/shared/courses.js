@@ -35,6 +35,12 @@ export const COURSES = [
         url: "https://www.coursera.org/learn/server-side-nodejs"
     },
     {
+        name: "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert",
+        school: "Udemy",
+        subject: "Computer Science",
+        url: "https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert/"
+    },
+    {
         name: "Engineering Economics",
         school: "McMaster University",
         subject: "Economics"

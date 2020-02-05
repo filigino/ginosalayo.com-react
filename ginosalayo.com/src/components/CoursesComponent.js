@@ -8,7 +8,8 @@ class Courses extends Component {
         super(props)
 
         this.state = {
-            isComSciOpen: false,
+            isCourseraOpen: false,
+            isUdemyOopen: false,
             isEconOpen: false,
             isElecOpen: false,
             isEngOpen: false,
@@ -20,7 +21,8 @@ class Courses extends Component {
             isStatsOpen: false
         }
 
-        this.toggleComSci = this.toggleComSci.bind(this)
+        this.toggleCoursera = this.toggleCoursera.bind(this)
+        this.toggleUdemy = this.toggleUdemy.bind(this)
         this.toggleEcon = this.toggleEcon.bind(this)
         this.toggleElec = this.toggleElec.bind(this)
         this.toggleEng = this.toggleEng.bind(this)
@@ -32,9 +34,15 @@ class Courses extends Component {
         this.toggleStats = this.toggleStats.bind(this)
     }
 
-    toggleComSci() {
+    toggleCoursera() {
         this.setState({
-            isComSciOpen: !this.state.isComSciOpen
+            isCourseraOpen: !this.state.isCourseraOpen
+        })
+    }
+
+    toggleUdemy() {
+        this.setState({
+            isUdemyOpen: !this.state.isUdemyOpen
         })
     }
 
@@ -106,14 +114,14 @@ class Courses extends Component {
                         </div>
                         <div className="col-12">
                             <Card>
-                                <CardHeader id="comSciHeader" role="tab" onClick={this.toggleComSci} aria-expanded="false" aria-controls="computerScienceCourses">
+                                <CardHeader id="courseraHeader" role="tab" onClick={this.toggleCoursera} aria-expanded="false" aria-controls="computerScienceCourses">
                                     <h4 className="mb-0">
-                                    { this.state.isComSciOpen
-                                        ? <span className="fa fa-minus-circle" />
-                                        : <span className="fa fa-plus-circle" />} Computer Science
+                                        { this.state.isCourseraOpen
+                                            ? <span className="fa fa-minus-circle" />
+                                            : <span className="fa fa-plus-circle" /> } Computer Science
                                     </h4>
                                 </CardHeader>
-                                <UncontrolledCollapse role="tabpanel" toggler="#comSciHeader">
+                                <UncontrolledCollapse role="tabpanel" toggler="#courseraHeader">
                                     <CardBody>
                                         <div className="row">
                                             <h5 className="col">Course Name</h5>
@@ -122,7 +130,7 @@ class Courses extends Component {
                                         <div className="row">
                                             <div className="col">
                                                 <ul>
-                                                {this.props.courses.filter((course) => course.subSchool === "Princeton University").map((course) => {
+                                                    {this.props.courses.filter((course) => course.subSchool === "Princeton University").map((course) => {
                                                         return (
                                                             <li>
                                                                 <a href={course.url} target="_blank" rel="noopener noreferrer" className="text-dark">
@@ -163,6 +171,41 @@ class Courses extends Component {
                     <div className="row row-content">
                         <div className="col-12">
                             <h3>
+                                <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer" className="text-dark">
+                                    Udemy
+                                </a>
+                            </h3>
+                        </div>
+                        <div className="col-12">
+                            <Card>
+                                <CardHeader id="udemyHeader" role="tab" onClick={this.toggleUdemy} aria-expanded="false" aria-controls="computerScienceCourses">
+                                    <h4 className="mb-0">
+                                        { this.state.isUdemyOpen
+                                            ? <span className="fa fa-minus-circle" />
+                                            : <span className="fa fa-plus-circle" />} Computer Science
+                                    </h4>
+                                </CardHeader>
+                                <UncontrolledCollapse role="tabpanel" toggler="#udemyHeader">
+                                    <CardBody>
+                                        <ul>
+                                            {this.props.courses.filter((course) => course.school === "Udemy").map((course) => {
+                                                return (
+                                                    <li>
+                                                        <a href={course.url} target="_blank" rel="noopener noreferrer" className="text-dark">
+                                                            {course.name}
+                                                        </a>
+                                                    </li>
+                                                )
+                                            })}
+                                        </ul>
+                                    </CardBody>
+                                </UncontrolledCollapse>
+                            </Card>
+                        </div>
+                    </div>
+                    <div className="row row-content">
+                        <div className="col-12">
+                            <h3>
                                 <a href="https://www.mcmaster.ca/" target="_blank" rel="noopener noreferrer" className="text-dark">
                                     McMaster University
                                 </a>
@@ -173,8 +216,8 @@ class Courses extends Component {
                                 <CardHeader id="econHeader" role="tab" onClick={this.toggleEcon} aria-expanded="false" aria-controls="econCourses">
                                     <h4 className="mb-0">
                                         { this.state.isEconOpen
-                                        ? <span className="fa fa-minus-circle" />
-                                        : <span className="fa fa-plus-circle" />} Economics
+                                            ? <span className="fa fa-minus-circle" />
+                                            : <span className="fa fa-plus-circle" />} Economics
                                     </h4>
                                 </CardHeader>
                                 <UncontrolledCollapse role="tabpanel" toggler="#econHeader">
