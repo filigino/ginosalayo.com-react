@@ -39,7 +39,7 @@ const Header = () => {
                             <h1>Gino Salayo</h1>
                         </div>
                         <div class="col-12">
-                            <h3>Mechatronics Engineering Graduate<br />from McMaster University</h3>
+                            <h3>Aspiring Software Engineer</h3>
                         </div>
                     </div>
                 </div>
