@@ -27,7 +27,7 @@ class Projects extends Component {
                                 </CardHeader>
                                 <CardBody>
                                     <div className="col-12 row-content text-center">
-                                        <a href="https://github.com/filigino/trace-app" target="_blank">
+                                        <a href="https://github.com/filigino/trace-app" target="_blank" rel="noopener noreferrer">
                                             <img src="img/trace.png" className="img-fluid" alt="Trace Logo"/>
                                         </a>
                                     </div>
@@ -46,8 +46,8 @@ class Projects extends Component {
                                 </CardHeader>
                                 <CardBody>
                                     <div className="col-12 row-content text-center">
-                                    <a href="https://github.com/filigino/8-bit-img-pixelator" target="_blank">
-                                        <img src="img/8-bit.png" className="img-fluid" alt="Pixelate Image"/>
+                                    <a href="https://github.com/filigino/8-bit-img-pixelator" target="_blank" rel="noopener noreferrer">
+                                        <img src="img/8-bit.png" className="img-fluid" alt="Pixelate Example"/>
                                     </a>
                                     </div>
                                     <p>
@@ -67,8 +67,8 @@ class Projects extends Component {
                                 </CardHeader>
                                 <CardBody>
                                     <div className="col-12 row-content text-center">
-                                        <a href="https://github.com/filigino/pathfinder" target="_blank">
-                                            <img src="img/a-star.gif" className="img-fluid" alt="Pathfinder Screenshot"/>
+                                        <a href="https://github.com/filigino/pathfinder" target="_blank" rel="noopener noreferrer">
+                                            <img src="img/a-star.gif" className="img-fluid" alt="Pathfinder GUI"/>
                                         </a>
                                     </div>
                                     <p>
@@ -86,7 +86,7 @@ class Projects extends Component {
                                 </CardHeader>
                                 <CardBody>
                                     <div className="col-12 row-content text-center">
-                                    <a href="https://github.com/filigino/p2p-file-sharer" target="_blank">
+                                    <a href="https://github.com/filigino/p2p-file-sharer" target="_blank" rel="noopener noreferrer">
                                         <img src="img/p2p.jpg" className="img-fluid" alt="P2P Sharer"/>
                                     </a>
                                     </div>
@@ -121,7 +121,7 @@ class Projects extends Component {
                                             Won 1st place in McMaster Software Engineering Department Capstone Expo
                                         </li>
                                         <li>
-                                            <a href="https://www.eng.mcmaster.ca/cas/news/software-and-mechatronics-students-create-device-farmers-and-museum-world" target="_blank">McMaster University news article</a> about the project
+                                            <a href="https://www.eng.mcmaster.ca/cas/news/software-and-mechatronics-students-create-device-farmers-and-museum-world" target="_blank" rel="noopener noreferrer">McMaster University news article</a> about the project
                                         </li>
                                         <li>
                                             Primary contribution was designing the solar-powered chassis that housed the data collection unit
