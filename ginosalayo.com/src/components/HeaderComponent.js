@@ -33,12 +33,12 @@ const Header = () => {
                 <div className="container text-dark">
                     <div className="row row-content text-center">
                         <div className="col-12">
-                            <img src="img/headshot.png" className="img-fluid headshot" alt="Gino Salayo"/>
+                            <img src="img/headshot.png" className="img-fluid headshot" alt="headshot"/>
                         </div>
-                        <div class="col-12">
+                        <div className="col-12">
                             <h1>Gino Salayo</h1>
                         </div>
-                        <div class="col-12">
+                        <div className="col-12">
                             <h3>Aspiring Software Engineer</h3>
                         </div>
                     </div>
@@ -46,21 +46,28 @@ const Header = () => {
             </Jumbotron>
             <div className="container text-dark">
                 <div className="row row-content text-center">
-                    <div className="col-12 col-sm">
+                    <div className="col-6 col-sm">
                         <h2>
                             <Link to="/about" className="text-dark">
                                 About
                             </Link>
                         </h2>
                     </div>
-                    <div className="col-12 col-sm">
+                    <div className="col-6 col-sm">
+                        <h2>
+                            <Link to="/projects" className="text-dark">
+                                Projects
+                            </Link>
+                        </h2>
+                    </div>
+                    <div className="col-6 col-sm">
                         <h2>
                             <Link to="/courses" className="text-dark">
                                 Courses
                             </Link>
                         </h2>
                     </div>
-                    <div className="col-12 col-sm">
+                    <div className="col-6 col-sm">
                         <h2>
                             <a href="Resume - Gino Salayo.pdf" target="_blank" rel="noopener noreferrer" className="text-dark">
                                 Resume
