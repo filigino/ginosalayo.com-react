@@ -39,7 +39,7 @@ const Header = () => {
                             <h1>Gino Salayo</h1>
                         </div>
                         <div className="col-12">
-                            <h3>Aspiring Software Engineer</h3>
+                            <h3>Software Engineer</h3>
                         </div>
                     </div>
                 </div>
