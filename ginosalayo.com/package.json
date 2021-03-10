@@ -9,7 +9,7 @@
     "acorn": "^7.4.0",
     "bootstrap": "^4.4.1",
     "dot-prop": "^5.2.0",
-    "elliptic": "^6.5.3",
+    "elliptic": "^6.5.4",
     "font-awesome": "^4.7.0",
     "kind-of": "^6.0.3",
     "lodash": "^4.17.19",
